@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import guru.springframework.sfgpetclinic.services.VetService;
 
-@RequestMapping({"vets","Vets"})
+@RequestMapping({"vets","Vets","vets.html"})
 @Controller
 public class VetController {
 	
