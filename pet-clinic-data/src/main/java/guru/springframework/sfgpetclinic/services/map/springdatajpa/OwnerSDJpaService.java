@@ -40,20 +40,17 @@ public class OwnerSDJpaService implements OwnerService {
 
 	@Override
 	public Owner save(Owner object) {
-		// TODO Auto-generated method stub
-		return null;
+		return ownerRepository.save(object);
 	}
 
 	@Override
 	public void delete(Owner object) {
-		// TODO Auto-generated method stub
-
+		ownerRepository.delete(object);
 	}
 
 	@Override
 	public void deleById(Long id) {
-		// TODO Auto-generated method stub
-
+		ownerRepository.deleteById(id);
 	}
 
 	@Override
