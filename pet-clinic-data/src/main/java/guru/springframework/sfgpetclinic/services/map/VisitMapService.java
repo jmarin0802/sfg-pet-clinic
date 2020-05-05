@@ -2,12 +2,15 @@ package guru.springframework.sfgpetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import guru.springframework.sfgpetclinic.model.Visit;
 import guru.springframework.sfgpetclinic.services.VisitService;
 
 /*
  *Created for jalemaov on 04-05-2020
  */
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
 	@Override
@@ -33,10 +36,12 @@ public class VisitMapService extends AbstractMapService<Visit, Long> implements 
 
 	@Override
 	public void delete(Visit object) {
+		super.delete(object);
 	}
 
 	@Override
 	public void deleById(Long id) {
+		super.deleteById(id);
 	}
 
 }
