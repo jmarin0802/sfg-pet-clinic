@@ -8,7 +8,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.hamcrest.Matchers.hasSize;
-import static org.mockito.Mockito.verifyZeroInteractions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,6 +23,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.services.OwnerService;
+
+
 
 /*
  *Created for jalemaov on 18-05-2020
