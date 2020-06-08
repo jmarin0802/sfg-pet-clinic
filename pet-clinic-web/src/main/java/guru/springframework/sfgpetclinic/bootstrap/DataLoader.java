@@ -5,18 +5,18 @@ import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import guru.springframework.sfgpetclinic.model.Owner;
-import guru.springframework.sfgpetclinic.model.Pet;
-import guru.springframework.sfgpetclinic.model.PetType;
-import guru.springframework.sfgpetclinic.model.Speciality;
-import guru.springframework.sfgpetclinic.model.Vet;
-import guru.springframework.sfgpetclinic.model.Visit;
-import guru.springframework.sfgpetclinic.repositories.VisitRepository;
-import guru.springframework.sfgpetclinic.services.OwnerService;
-import guru.springframework.sfgpetclinic.services.PetTypeService;
-import guru.springframework.sfgpetclinic.services.SpecialtyService;
-import guru.springframework.sfgpetclinic.services.VetService;
-import guru.springframework.sfgpetclinic.services.VisitService;
+import guru.springframework.petclinicdata.model.Owner;
+import guru.springframework.petclinicdata.model.Pet;
+import guru.springframework.petclinicdata.model.PetType;
+import guru.springframework.petclinicdata.model.Speciality;
+import guru.springframework.petclinicdata.model.Vet;
+import guru.springframework.petclinicdata.model.Visit;
+import guru.springframework.petclinicdata.services.OwnerService;
+import guru.springframework.petclinicdata.services.PetTypeService;
+import guru.springframework.petclinicdata.services.SpecialtyService;
+import guru.springframework.petclinicdata.services.VetService;
+import guru.springframework.petclinicdata.services.VisitService;
+
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -50,7 +50,7 @@ public class DataLoader implements CommandLineRunner {
     	PetType savedDogPetType = petTypeService.save(dog);
     	
     	PetType cat = new PetType();
-    	dog.setName("Cat");
+    	cat.setName("Cat");
     	PetType savedCatPetType = petTypeService.save(cat);
     	
     	Speciality radiology = new Speciality();
@@ -77,7 +77,7 @@ public class DataLoader implements CommandLineRunner {
         Pet mikesPet = new Pet();
         mikesPet.setPetType(savedDogPetType);
         mikesPet.setOwner(owner1);
-        mikesPet.setBirtDate(LocalDate.now());
+        mikesPet.setBirthDate(LocalDate.now());
         mikesPet.setName("Rosco");
         owner1.getPets().add(mikesPet);
 
@@ -92,7 +92,7 @@ public class DataLoader implements CommandLineRunner {
         Pet FionaPet = new Pet();
         FionaPet.setPetType(savedCatPetType);
         FionaPet.setOwner(owner2);
-        FionaPet.setBirtDate(LocalDate.now());
+        FionaPet.setBirthDate(LocalDate.now());
         FionaPet.setName("Misu");
         owner2.getPets().add(FionaPet);
         

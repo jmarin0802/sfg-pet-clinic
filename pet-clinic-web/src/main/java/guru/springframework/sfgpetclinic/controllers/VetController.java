@@ -4,7 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import guru.springframework.sfgpetclinic.services.VetService;
+import guru.springframework.petclinicdata.services.VetService;
+
 
 @RequestMapping({"vets","Vets","vets.html"})
 @Controller

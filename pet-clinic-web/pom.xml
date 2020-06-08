@@ -72,12 +72,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
+			<!-- <exclusions>
 				<exclusion>
 					<groupId>junit</groupId>
 					<artifactId>junit</artifactId>
 				</exclusion>
-			</exclusions>
+			</exclusions> -->
 		</dependency>
 
 		<dependency>
@@ -128,7 +128,13 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-
+        	<!-- <plugin>
+            	<groupId>org.springframework.boot</groupId>
+            	<artifactId>spring-boot-maven-plugin</artifactId>             
+            	<configuration>    
+                	<mainClass>guru.springframework.sfgpetclinic.SfgPetClinicApplication</mainClass>
+            	</configuration>
+        	</plugin> -->
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.0</version>

@@ -7,9 +7,11 @@ import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import guru.springframework.sfgpetclinic.model.Owner;
-import guru.springframework.sfgpetclinic.services.PetService;
-import guru.springframework.sfgpetclinic.services.PetTypeService;
+import guru.springframework.petclinicdata.model.Owner;
+import guru.springframework.petclinicdata.repositories.OwnerRepository;
+import guru.springframework.petclinicdata.services.PetService;
+import guru.springframework.petclinicdata.services.PetTypeService;
+import guru.springframework.petclinicdata.services.map.OwnerMapService;
 
 /*
  *Created for jalemaov on 15-05-2020
@@ -24,7 +26,7 @@ class OwnerMapServiceTest {
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		ownerMapService = new OwnerMapService(new PetMapService(), new PetTypeMapService());
+		ownerMapService = new OwnerMapService(null, null, null);
 		ownerMapService.save(Owner.builder().id(ownerId).firstName(firstName).lastName(lastName).build());
 	}
 	
