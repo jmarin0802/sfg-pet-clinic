@@ -20,9 +20,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import guru.springframework.petclinicdata.model.Owner;
-import guru.springframework.petclinicdata.services.OwnerService;
 import guru.springframework.sfgpetclinic.controllers.OwnerController;
+import guru.springframework.sfgpetclinic.model.Owner;
+import guru.springframework.sfgpetclinic.services.OwnerService;
 
 /*
  *Created for jalemaov on 18-05-2020
@@ -60,7 +60,7 @@ class OwnerControllerTest {
 	@Test
 	void testFindOwners() throws Exception{
 		mockMvc.perform(get("/owners/find"))
-				.andExpect(view().name("owners/findOwners"))
+				.andExpect(view().name("/owners/findOwners"))
 				.andExpect(status().isOk())
 				.andExpect(model().attributeExists("owner"));
 		
@@ -75,7 +75,7 @@ class OwnerControllerTest {
 		
 		mockMvc.perform(get("/owners"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("owners/ownerList"))
+				.andExpect(view().name("/owners/ownerList"))
 				.andExpect(model().attribute("selections", hasSize(2)));
 	}
 	
@@ -93,7 +93,7 @@ class OwnerControllerTest {
 		when(ownerService.findById(anyLong())).thenReturn(Owner.builder().id(1L).build());
 		mockMvc.perform(get("/owners/1"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("owners/ownerDetails"))
+				.andExpect(view().name("/owners/ownerDetails"))
 				.andExpect(model().attribute("owner", hasProperty("id", is(1L))));
 	}
 }

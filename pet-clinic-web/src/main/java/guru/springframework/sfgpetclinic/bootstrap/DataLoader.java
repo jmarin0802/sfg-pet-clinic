@@ -5,17 +5,17 @@ import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import guru.springframework.petclinicdata.model.Owner;
-import guru.springframework.petclinicdata.model.Pet;
-import guru.springframework.petclinicdata.model.PetType;
-import guru.springframework.petclinicdata.model.Speciality;
-import guru.springframework.petclinicdata.model.Vet;
-import guru.springframework.petclinicdata.model.Visit;
-import guru.springframework.petclinicdata.services.OwnerService;
-import guru.springframework.petclinicdata.services.PetTypeService;
-import guru.springframework.petclinicdata.services.SpecialtyService;
-import guru.springframework.petclinicdata.services.VetService;
-import guru.springframework.petclinicdata.services.VisitService;
+import guru.springframework.sfgpetclinic.model.Owner;
+import guru.springframework.sfgpetclinic.model.Pet;
+import guru.springframework.sfgpetclinic.model.PetType;
+import guru.springframework.sfgpetclinic.model.Speciality;
+import guru.springframework.sfgpetclinic.model.Vet;
+import guru.springframework.sfgpetclinic.model.Visit;
+import guru.springframework.sfgpetclinic.services.OwnerService;
+import guru.springframework.sfgpetclinic.services.PetTypeService;
+import guru.springframework.sfgpetclinic.services.SpecialtyService;
+import guru.springframework.sfgpetclinic.services.VetService;
+import guru.springframework.sfgpetclinic.services.VisitService;
 
 
 @Component

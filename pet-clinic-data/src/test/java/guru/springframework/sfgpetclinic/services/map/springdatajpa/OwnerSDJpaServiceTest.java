@@ -18,11 +18,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import guru.springframework.petclinicdata.model.Owner;
-import guru.springframework.petclinicdata.repositories.OwnerRepository;
-import guru.springframework.petclinicdata.repositories.PetRepository;
-import guru.springframework.petclinicdata.repositories.PetTypeRepository;
-import guru.springframework.petclinicdata.services.map.springdatajpa.OwnerSDJpaService;
+import guru.springframework.sfgpetclinic.model.Owner;
+import guru.springframework.sfgpetclinic.repositories.OwnerRepository;
+import guru.springframework.sfgpetclinic.repositories.PetRepository;
+import guru.springframework.sfgpetclinic.repositories.PetTypeRepository;
+import guru.springframework.sfgpetclinic.services.map.springdatajpa.OwnerSDJpaService;
 
 /*
  *Created for jalemaov on 17-05-2020
