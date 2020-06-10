@@ -43,22 +43,23 @@ public class OwnerController {
     @GetMapping("/find")
     public String findOwners(Model model) {
         model.addAttribute("owner", Owner.builder().build());
-        return "/owners/findOwners";
+        return "owners/findOwners";
     }
     
     @GetMapping
     public String processFindForm(Owner owner, BindingResult result, Model model) {
         // allow parameterless GET request for /owners to return all records
-        if (owner.getLastName() == null) {
+        
+    	if (owner.getLastName() == null) {
             owner.setLastName(""); // empty string signifies broadest possible search
         }
 
         // find owners by last name
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+        List<Owner> results = ownerService.findAllByLastNameLike("%"+ owner.getLastName() + "%");
         if (results.isEmpty()) {
             // no owners found
             result.rejectValue("lastName", "notFound", "not found");
-            return "/owners/findOwners";
+            return "owners/findOwners";
         } else if (results.size() == 1) {
             // 1 owner found
             owner = results.get(0);
@@ -66,13 +67,13 @@ public class OwnerController {
         } else {
             // multiple owners found
             model.addAttribute("selections", results);
-            return "/owners/ownerList";
+            return "owners/ownerList";
         }
     }
     
     @GetMapping("/{ownerId}")
     public ModelAndView showOwner(@PathVariable("ownerId") Long ownerId) {
-        ModelAndView mav = new ModelAndView("/owners/ownerDetails");
+        ModelAndView mav = new ModelAndView("owners/ownerDetails");
         mav.addObject(ownerService.findById(ownerId));
         return mav;
     }

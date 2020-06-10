@@ -1,6 +1,10 @@
 package guru.springframework.sfgpetclinic.services.map;
 
+import static org.junit.Assert.assertArrayEquals;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -78,7 +82,8 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 	}
 	@Override
 	public List<Owner> findAllByLastNameLike(String lastName) {
-		return ownerRepository.findAllByLastNameLike(lastName);
+		
+		return null;
 	}
 
 }

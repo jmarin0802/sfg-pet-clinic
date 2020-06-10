@@ -57,13 +57,12 @@ public class OwnerSDJpaService implements OwnerService {
 
 	@Override
 	public Owner findByLastName(String lastName) {
-		// TODO Auto-generated method stub
 		return ownerRepository.findByLastName(lastName);
 	}
 
 	@Override
 	public List<Owner> findAllByLastNameLike(String lastName) {
-		return null;
+		return ownerRepository.findAllByLastNameLike(lastName);
 	}
 
 }
